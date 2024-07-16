@@ -1,0 +1,21 @@
+/* Hide timeline and related controls */
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display {
+  display: none !important;
+}
+
+/* Hide play, pause, mute, volume, and full screen buttons */
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-pause-button,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-fullscreen-button,
+video::-webkit-media-controls-overflow-button {
+  display: none !important;
+}
+
+/* Hide WebVTT cues (subtitles) */
+video::cue {
+  display: none;
+}

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue-300 via-blue-700 to-blue-400 bg-clip-text text-transparent;
+  }
+
+  .bg-gradient1 {
+    @apply bg-gradient-to-r from-[#afdef2]  via-[#f5c9ec]  to-[#048ffa] bg-clip-border;
+  }
+  .bg-gradient2 {
+    @apply bg-gradient-to-r from-[#f9b8e5]  via-[#bedef6]  to-[#f5c9ec] bg-clip-border;
+  }
+  .videoo{
+    @apply absolute block overflow-hidden h-full w-full z-20 opacity-100 
+  }
+}
+/* @layer components{
+.videoo{
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    z-index: 20;
+    opacity: 1;
+    visibility: inherit;
+    border: 5px solid red;
+}
+} */
+
+
+
+.text-gradient {
+    background: linear-gradient(to right, #eddde4, #2B6CB0, #bcdbf2);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.product-border {
+    border-left: 2px solid black; 
+    height: 0px;
+    animation: scaleBorderHeight 2s forwards;
+}
+
+.product-border-none {
+    border-left: 2px solid transparent; 
+}
+.overlay{
+  background-color: rgba(0,0,0,.4);
+}
+
+@keyframes scaleBorderHeight {
+    0% {
+        height: 10;
+        border-left-width: 2px;
+    }
+    100% {
+        height: 60px; 
+        border-left-width: 2px;
+    }
+}
+
+.fade-up {
+    animation: fadeUp 1s ease-in-out forwards;
+  }
+
+@keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-down{
+    animation: fadeDown 1s ease-in-out forwards;
+  }
+
+  @keyframes fadeDown {
+    0% {
+        opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+  }
+
+  .fade-down-nav{
+    animation: fadeDownNav 0.5s ease-in-out forwards ;
+  }
+
+  @keyframes fadeDownNav {
+    0% {
+        opacity: 0;
+      transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+  }
+/*   
+.hr-rule{
+  transition: width 250ms ease-in-out backwards;
+} */
+
+  
+
+.hr-rule {
+  
+  transition: width 600ms ease-in-out; 
+}
+
+.hovered {
+  width: 0px; /* Width on hover */
+}
+.borderr{
+  border: 2px solid red;
+}
+.techDesignStyle{
+  
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.bgVideoStyle{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
